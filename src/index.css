@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Branding Colors (Static) */
+    --color-primary: 59 110 172;
+    /* #3b6eac Eureka Blue */
+    --color-accent: 136 214 0;
+    /* #88d600 Eureka Lime */
+
+    /* Theme Colors (Light Mode) */
+    --background: 248 250 252;
+    /* #f8fafc */
+    --surface: 241 245 249;
+    /* #f1f5f9 */
+    --text: 26 26 26;
+    /* #1a1a1a */
+    --text-muted: 75 85 99;
+    /* #4b5563 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .dark {
+    /* Theme Colors (Dark Mode) */
+    --background: 15 23 42;
+    /* #0f172a / Slate 900 */
+    --surface: 30 41 59;
+    /* #1e293b / Slate 800 */
+    --text: 248 250 252;
+    /* #f8fafc / Slate 50 */
+    --text-muted: 203 213 225;
+    /* #cbd5e1 / Slate 300 */
+
+    /* Adjust accent brightness/contrast for dark mode if needed */
+  }
+
+  body {
+    @apply bg-background text-text font-sans antialiased text-lg transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-text;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
